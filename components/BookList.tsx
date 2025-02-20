@@ -29,7 +29,7 @@ const BookList: React.FC<BookListProps> = ({books}) => {
   
     const confirmDelete = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:5000/books/${deleteBookId}`, { method: 'DELETE' });
+        const response = await fetch(`https://managementbook-be.onrender.com/books/${deleteBookId}`, { method: 'DELETE' });
         if (response.status === 200) {
           fetchBooks(); 
         } else {
@@ -47,7 +47,7 @@ const BookList: React.FC<BookListProps> = ({books}) => {
     // Get all books
     const fetchBooks = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:5000/books');
+        const response = await fetch('https://managementbook-be.onrender.com/books');
         if (response.ok) {
           const data = await response.json();
           setBookList(data);
@@ -63,7 +63,7 @@ const BookList: React.FC<BookListProps> = ({books}) => {
     // Create book
     const handleCreateNewBook = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:5000/books", {
+        const response = await fetch("https://managementbook-be.onrender.com/books", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

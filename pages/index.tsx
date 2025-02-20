@@ -7,7 +7,7 @@ const Home: React.FC = () => {
   const [books, setBooks] = useState<Book[]>([])
   useEffect (() => {
     const fetchBooks = async () => {
-      const response = await fetch(`http://127.0.0.1:5000/books`);
+      const response = await fetch(`https://managementbook-be.onrender.com/books`);
       const data = await response.json();
       setBooks(data);
     };

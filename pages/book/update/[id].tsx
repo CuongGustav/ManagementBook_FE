@@ -15,7 +15,7 @@ const UpdateBook = () => {
 
     const fetchBook = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:5000/books/${id}`);
+        const response = await fetch(`https://managementbook-be.onrender.com/books/${id}`);
         if (response.ok) {
           const data = await response.json();
           setBook(data);
@@ -40,7 +40,7 @@ const UpdateBook = () => {
     }
 
     try {
-      const response = await fetch(`http://127.0.0.1:5000/books/${id}`, {
+      const response = await fetch(`https://managementbook-be.onrender.com/books/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedBook),
