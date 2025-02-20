@@ -1,0 +1,20 @@
+.booklistTitle{
+    cursor: pointer;
+}
+.booklistTitleA{
+    text-decoration: none;
+    color: black;
+}
+.booklistTitleA:hover{
+    color: blue;
+}
+.booklistButton{
+    color: #fff;
+}
+.booklistButtonClose{
+    background-color: #fff;
+}
+.booklistButtonClose:hover{
+    background-color: red;
+    color: #fff;
+}
